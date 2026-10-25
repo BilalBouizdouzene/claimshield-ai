@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Composants techniques ClaimShield AI</title>
+  <desc id="desc">Architecture détaillée des composants frontend, API FastAPI, services métier, modèle faster-whisper, stockage SQLite et exports protégés.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071224"/><stop offset="1" stop-color="#101a3b"/></linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#168bff"/><stop offset="1" stop-color="#5241ff"/></linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#00bee9"/><stop offset="1" stop-color="#04d8be"/></linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#744fff"/><stop offset="1" stop-color="#d147f4"/></linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e99a20"/><stop offset="1" stop-color="#ffcc4b"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#38577f" stroke-opacity=".16"/></pattern>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#5bbdff"/></marker>
+    <marker id="arrowGreen" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#33dfb9"/></marker>
+    <marker id="arrowAmber" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#ffc044"/></marker>
+    <style>
+      .title{font:700 34px 'Segoe UI',Arial,sans-serif;fill:#f4f7ff}.subtitle{font:400 16px 'Segoe UI',Arial,sans-serif;fill:#9cb3d7}.lane{font:700 13px 'Segoe UI',Arial,sans-serif;fill:#6fd9ff;letter-spacing:1.5px}.card-title{font:700 18px 'Segoe UI',Arial,sans-serif;fill:#f4f7ff}.body{font:400 14px 'Segoe UI',Arial,sans-serif;fill:#a9bfde}.small{font:600 12px 'Segoe UI',Arial,sans-serif;fill:#72d8ff;letter-spacing:1px}.mono{font:500 13px Consolas,monospace;fill:#92d8ff}.tag{font:600 12px 'Segoe UI',Arial,sans-serif;fill:#d9e8ff}.note{font:600 15px 'Segoe UI',Arial,sans-serif;fill:#d9e8ff}.line{stroke:#4caeff;stroke-width:2.5;fill:none;marker-end:url(#arrowBlue)}.greenline{stroke:#33dfb9;stroke-width:2.5;fill:none;marker-end:url(#arrowGreen)}.amberline{stroke:#ffc044;stroke-width:2.5;fill:none;marker-end:url(#arrowAmber)}
+    </style>
+  </defs>
+  <rect width="1600" height="980" fill="url(#bg)"/><rect width="1600" height="980" fill="url(#grid)"/>
+  <circle cx="1500" cy="85" r="230" fill="#3d3fff" opacity=".11" filter="url(#glow)"/><circle cx="70" cy="900" r="210" fill="#00bfe9" opacity=".08" filter="url(#glow)"/>
+  <text x="70" y="70" class="small">ARCHITECTURE / COMPONENTS &amp; DATA FLOW</text><text x="70" y="119" class="title">Composants techniques et frontières de confiance</text><text x="70" y="151" class="subtitle">Une chaîne locale : le navigateur orchestre, l’API valide, les services analysent et le stockage conserve la provenance.</text>
+  <rect x="1260" y="67" width="270" height="54" rx="27" fill="#0b2f38" stroke="#1dd9bb"/><circle cx="1290" cy="94" r="9" fill="#27e7be"/><text x="1312" y="100" class="note">Aucun appel cloud requis</text>
+
+  <rect x="45" y="190" width="350" height="650" rx="22" fill="#0b1830" stroke="#23528a" stroke-width="2"/><text x="75" y="230" class="lane">01 · CLIENT</text><text x="75" y="260" class="card-title">Interface React / Vite</text><text x="75" y="285" class="body">Le gestionnaire pilote chaque étape.</text>
+  <rect x="70" y="315" width="300" height="92" rx="14" fill="#101f3b" stroke="#2c66a7"/><text x="92" y="345" class="card-title">Studio audio</text><text x="92" y="371" class="body">MediaRecorder, import, waveform</text><text x="92" y="393" class="mono">POST /audio/upload</text>
+  <rect x="70" y="427" width="300" height="92" rx="14" fill="#101f3b" stroke="#2c66a7"/><text x="92" y="457" class="card-title">Revue et preuves</text><text x="92" y="483" class="body">Transcription, faits, segments</text><text x="92" y="505" class="mono">PATCH /jobs/{id}/...</text>
+  <rect x="70" y="539" width="300" height="92" rx="14" fill="#101f3b" stroke="#2c66a7"/><text x="92" y="569" class="card-title">Protection et export</text><text x="92" y="595" class="body">Masquage, audio protégé, JSON</text><text x="92" y="617" class="mono">POST /jobs/{id}/redact</text>
+  <rect x="70" y="651" width="300" height="150" rx="14" fill="#112344" stroke="#27cdb5"/><text x="92" y="681" class="card-title">État local</text><text x="92" y="709" class="body">• job courant et audio aperçu</text><text x="92" y="734" class="body">• statut de traitement</text><text x="92" y="759" class="body">• aucune donnée envoyée par défaut</text><text x="92" y="785" class="tag">Navigateur → API HTTP locale</text>
+
+  <rect x="455" y="190" width="350" height="650" rx="22" fill="#0b1830" stroke="#2873b8" stroke-width="2"/><text x="485" y="230" class="lane">02 · API</text><text x="485" y="260" class="card-title">FastAPI / contrats JSON</text><text x="485" y="285" class="body">Point d’entrée unique du workflow.</text>
+  <rect x="480" y="315" width="300" height="92" rx="14" fill="#102241" stroke="#2c75c5"/><text x="502" y="345" class="card-title">Validation d’entrée</text><text x="502" y="371" class="body">Extension, taille, durée, décodage</text><text x="502" y="393" class="mono">UploadFile · Pydantic</text>
+  <rect x="480" y="427" width="300" height="92" rx="14" fill="#102241" stroke="#2c75c5"/><text x="502" y="457" class="card-title">Cycle de vie du job</text><text x="502" y="483" class="body">uploaded → analyzing → ready</text><text x="502" y="505" class="mono">jobs/{id} · provenance</text>
+  <rect x="480" y="539" width="300" height="92" rx="14" fill="#102241" stroke="#2c75c5"/><text x="502" y="569" class="card-title">Contrôle d’accès local</text><text x="502" y="595" class="body">CORS, chemins runtime, rétention</text><text x="502" y="617" class="mono">127.0.0.1 · 30 jours</text>
+  <rect x="480" y="651" width="300" height="150" rx="14" fill="#102344" stroke="#27cdb5"/><text x="502" y="681" class="card-title">Routes métier</text><text x="502" y="709" class="body">/audio · /jobs · /claims</text><text x="502" y="734" class="body">/customers · /policies</text><text x="502" y="759" class="body">/evaluation · /download</text><text x="502" y="785" class="tag">Orchestration sans décision automatique</text>
+
+  <rect x="865" y="190" width="350" height="650" rx="22" fill="#0b1830" stroke="#4a3e9c" stroke-width="2"/><text x="895" y="230" class="lane">03 · SERVICES IA</text><text x="895" y="260" class="card-title">Services spécialisés</text><text x="895" y="285" class="body">Chaque module a une responsabilité testable.</text>
+  <rect x="890" y="315" width="300" height="68" rx="14" fill="#171d43" stroke="#7f5af7"/><text x="912" y="344" class="card-title">services_audio</text><text x="912" y="367" class="body">inspection · PCM · waveform</text>
+  <rect x="890" y="395" width="300" height="68" rx="14" fill="#171d43" stroke="#20cde0"/><text x="912" y="424" class="card-title">services_asr</text><text x="912" y="447" class="body">faster-whisper · langue · timestamps</text>
+  <rect x="890" y="475" width="300" height="68" rx="14" fill="#171d43" stroke="#33dfb9"/><text x="912" y="504" class="card-title">services_pii</text><text x="912" y="527" class="body">PII · transcript protégé · alignement</text>
+  <rect x="890" y="555" width="300" height="68" rx="14" fill="#171d43" stroke="#ffc044"/><text x="912" y="584" class="card-title">services_claim</text><text x="912" y="607" class="body">faits · chronologie · statut de revue</text>
+  <rect x="890" y="635" width="300" height="68" rx="14" fill="#171d43" stroke="#ff9e46"/><text x="912" y="664" class="card-title">services_matching</text><text x="912" y="687" class="body">client · contrat · confirmation humaine</text>
+  <rect x="890" y="715" width="300" height="78" rx="14" fill="#241b45" stroke="#b06cff"/><text x="912" y="744" class="card-title">services_evaluation</text><text x="912" y="767" class="body">WER · CER · précision / rappel PII</text>
+
+  <rect x="1275" y="190" width="280" height="650" rx="22" fill="#0b1830" stroke="#286c77" stroke-width="2"/><text x="1305" y="230" class="lane">04 · DONNÉES LOCALES</text><text x="1305" y="260" class="card-title">Persistance et sorties</text><text x="1305" y="285" class="body">Les artefacts restent sous runtime.</text>
+  <rect x="1300" y="320" width="230" height="105" rx="14" fill="#102c3b" stroke="#28d0bc"/><text x="1322" y="350" class="card-title">SQLite</text><text x="1322" y="377" class="body">claimshield.sqlite3</text><text x="1322" y="400" class="body">jobs, clients, contrats</text>
+  <rect x="1300" y="445" width="230" height="105" rx="14" fill="#102b45" stroke="#4caeff"/><text x="1322" y="475" class="card-title">data/runtime</text><text x="1322" y="502" class="body">audio original</text><text x="1322" y="525" class="body">transcripts · exports</text>
+  <rect x="1300" y="570" width="230" height="105" rx="14" fill="#2a213c" stroke="#b06cff"/><text x="1322" y="600" class="card-title">Sorties protégées</text><text x="1322" y="627" class="body">WAV masqué · JSON</text><text x="1322" y="650" class="body">rapport et provenance</text>
+  <rect x="1300" y="695" width="230" height="105" rx="14" fill="#342915" stroke="#ffc044"/><text x="1322" y="725" class="card-title">Revue humaine</text><text x="1322" y="752" class="body">confirmation avant export</text><text x="1322" y="775" class="body">aucune décision de fraude</text>
+
+  <path d="M395 470H455" class="line"/><path d="M805 470H865" class="line"/><path d="M1215 470H1275" class="greenline"/>
+  <path d="M805 690H865" class="line"/><path d="M1215 690H1275" class="amberline"/>
+  <text x="405" y="452" class="small">HTTP LOCAL</text><text x="815" y="452" class="small">DISPATCH</text><text x="1222" y="452" class="small">PERSIST</text>
+  <text x="70" y="900" class="note">Frontière de confiance : traitement local par défaut · fichiers privés ignorés par Git · validation humaine obligatoire.</text>
+  <text x="70" y="930" class="body">Les métriques ASR et PII deviennent interprétables uniquement avec un corpus annoté et une revue représentative.</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protection des données dans ClaimShield AI</title>
+  <desc id="desc">Flux de protection des données sensibles, avec séparation entre données brutes locales, revue et exports protégés.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071224"/><stop offset="1" stop-color="#0d1b37"/></linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#00bfe9"/><stop offset="1" stop-color="#04d9be"/></linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7650ff"/><stop offset="1" stop-color="#d046f7"/></linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff4e73"/><stop offset="1" stop-color="#ff8c45"/></linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#05c998"/><stop offset="1" stop-color="#83e45d"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#35527b" stroke-opacity=".18"/></pattern>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#62d7c5"/></marker>
+    <style>
+      .title{font:700 34px 'Segoe UI',Arial,sans-serif;fill:#f4f7ff}.subtitle{font:400 16px 'Segoe UI',Arial,sans-serif;fill:#9cb3d7}.h{font:700 20px 'Segoe UI',Arial,sans-serif;fill:#f4f7ff}.body{font:400 14px 'Segoe UI',Arial,sans-serif;fill:#a9bfde}.small{font:600 12px 'Segoe UI',Arial,sans-serif;fill:#6ed7ff;letter-spacing:1px}.note{font:600 15px 'Segoe UI',Arial,sans-serif;fill:#d9e8ff}.mono{font:500 13px Consolas,monospace;fill:#8bd4ff}
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/><rect width="1600" height="900" fill="url(#grid)"/>
+  <text x="70" y="75" class="small">SECURITY / CONTROLLED EXPORTS</text><text x="70" y="125" class="title">Protection des données sensibles</text><text x="70" y="157" class="subtitle">Le masquage est une étape contrôlée de revue, pas une promesse d’anonymisation automatique.</text>
+  <rect x="70" y="210" width="960" height="500" rx="24" fill="#081a32" stroke="#285a8b" stroke-width="2"/><text x="105" y="253" class="small">ZONE DE TRAITEMENT LOCAL</text><text x="105" y="283" class="body">Les données brutes ne sortent pas de la machine pendant le parcours standard.</text>
+  <g transform="translate(110 350)">
+    <g><rect width="190" height="205" rx="18" fill="#0d2a43" stroke="#1dc6e9" stroke-width="2"/><circle cx="38" cy="42" r="24" fill="url(#cyan)"/><text x="24" y="48" class="note">01</text><text x="24" y="96" class="h">Audio brut</text><text x="24" y="129" class="body"><tspan x="24">Source locale</tspan><tspan x="24" dy="21">+ métadonnées</tspan></text><text x="24" y="180" class="mono">data/runtime</text></g>
+    <g transform="translate(230)"><rect width="190" height="205" rx="18" fill="#241842" stroke="#a45aff" stroke-width="2"/><circle cx="38" cy="42" r="24" fill="url(#violet)"/><text x="24" y="48" class="note">02</text><text x="24" y="96" class="h">Entités PII</text><text x="24" y="129" class="body"><tspan x="24">Personne, téléphone,</tspan><tspan x="24" dy="21">adresse, contrat…</tspan></text><text x="24" y="180" class="mono">spans + confiance</text></g>
+    <g transform="translate(460)"><rect width="190" height="205" rx="18" fill="#241842" stroke="#a45aff" stroke-width="2"/><circle cx="38" cy="42" r="24" fill="url(#violet)"/><text x="24" y="48" class="note">03</text><text x="24" y="96" class="h">Revue</text><text x="24" y="129" class="body"><tspan x="24">Politique et action</tspan><tspan x="24" dy="21">choisies par l’équipe</tspan></text><text x="24" y="180" class="mono">review status</text></g>
+    <g transform="translate(690)"><rect width="190" height="205" rx="18" fill="#14372e" stroke="#25d4a1" stroke-width="2"/><circle cx="38" cy="42" r="24" fill="url(#green)"/><text x="24" y="48" class="note">04</text><text x="24" y="96" class="h">Audio protégé</text><text x="24" y="129" class="body"><tspan x="24">Silence, bip ou bruit</tspan><tspan x="24" dy="21">avec padding/fade</tspan></text><text x="24" y="180" class="mono">WAV réécrit</text></g>
+    <path d="M195 102H220M425 102H450M655 102H680" stroke="#62d7c5" stroke-width="3" marker-end="url(#arrow)"/>
+  </g>
+  <rect x="1080" y="210" width="450" height="500" rx="24" fill="#321a2d" stroke="#ed5a77" stroke-width="2"/><text x="1115" y="253" class="small" fill="#ff7f97">SORTIE SOUS CONTRÔLE</text><text x="1115" y="297" class="h">Ce qui est exportable</text>
+  <g transform="translate(1115 335)"><rect width="370" height="78" rx="14" fill="#13372f" stroke="#28d2a5"/><text x="24" y="32" class="note">✓ Transcript protégé</text><text x="24" y="57" class="body">Les valeurs sensibles sont remplacées.</text></g>
+  <g transform="translate(1115 435)"><rect width="370" height="78" rx="14" fill="#13372f" stroke="#28d2a5"/><text x="24" y="32" class="note">✓ JSON de provenance</text><text x="24" y="57" class="body">Modèle, régions, actions et statuts.</text></g>
+  <g transform="translate(1115 535)"><rect width="370" height="78" rx="14" fill="#13372f" stroke="#28d2a5"/><text x="24" y="32" class="note">✓ Audio protégé</text><text x="24" y="57" class="body">Export audio après revue.</text></g>
+  <path d="M990 505H1060" stroke="#62d7c5" stroke-width="4" marker-end="url(#arrow)"/>
+  <rect x="70" y="755" width="1460" height="75" rx="16" fill="#3a2029" stroke="#e65a73"/><circle cx="105" cy="793" r="16" fill="url(#red)"/><text x="140" y="788" class="note">Limite importante</text><text x="140" y="812" class="body">Le masquage réduit l’exposition, mais ne garantit pas l’anonymisation. La validation humaine reste obligatoire.</text>
+</svg>

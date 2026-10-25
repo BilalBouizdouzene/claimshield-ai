@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Évaluation reproductible ClaimShield AI</title>
+  <desc id="desc">Architecture du laboratoire d'évaluation avec corpus annoté, endpoint de score, métriques ASR et PII et interprétation humaine.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071224"/><stop offset="1" stop-color="#0d1b37"/></linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#188dff"/><stop offset="1" stop-color="#5141ff"/></linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7650ff"/><stop offset="1" stop-color="#d046f7"/></linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#05c998"/><stop offset="1" stop-color="#83e45d"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#35527b" stroke-opacity=".18"/></pattern>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#6ea7ff"/></marker>
+    <style>
+      .title{font:700 34px 'Segoe UI',Arial,sans-serif;fill:#f4f7ff}.subtitle{font:400 16px 'Segoe UI',Arial,sans-serif;fill:#9cb3d7}.h{font:700 21px 'Segoe UI',Arial,sans-serif;fill:#f4f7ff}.body{font:400 14px 'Segoe UI',Arial,sans-serif;fill:#a9bfde}.small{font:600 12px 'Segoe UI',Arial,sans-serif;fill:#6ed7ff;letter-spacing:1px}.note{font:600 15px 'Segoe UI',Arial,sans-serif;fill:#d9e8ff}.mono{font:500 13px Consolas,monospace;fill:#8bd4ff}.metric{font:700 25px Consolas,monospace;fill:#7ee7d0}
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/><rect width="1600" height="900" fill="url(#grid)"/>
+  <text x="70" y="75" class="small">LABORATOIRE / REPRODUCTIBLE EVALUATION</text><text x="70" y="125" class="title">Mesurer sans inventer les performances</text><text x="70" y="157" class="subtitle">Les métriques ne deviennent disponibles qu’après import d’un corpus annoté avec texte et entités attendus.</text>
+  <g transform="translate(70 245)">
+    <rect width="280" height="340" rx="22" fill="#0d2444" stroke="#398cff" stroke-width="2"/><circle cx="52" cy="55" r="28" fill="url(#blue)"/><text x="39" y="62" class="note">01</text><text x="30" y="120" class="h">Corpus annoté</text><text x="30" y="158" class="body"><tspan x="30">Audio ou JSON avec :</tspan><tspan x="30" dy="25">• référence transcription</tspan><tspan x="30" dy="25">• entités PII attendues</tspan><tspan x="30" dy="25">• hypothèse du modèle</tspan></text><text x="30" y="296" class="mono">JSON · WAV · CSV</text>
+    <rect x="285" y="80" width="55" height="2" fill="#6ea7ff"/><path d="M330 80l14-8v16z" fill="#6ea7ff"/>
+    <rect x="350" y="0" width="280" height="340" rx="22" fill="#241842" stroke="#a45aff" stroke-width="2"/><circle cx="402" cy="55" r="28" fill="url(#violet)"/><text x="389" y="62" class="note">02</text><text x="380" y="120" class="h">Score API</text><text x="380" y="158" class="body"><tspan x="380">Endpoint local :</tspan><tspan x="380" dy="25">POST /api/evaluation/score</tspan><tspan x="380" dy="25">normalisation contrôlée</tspan><tspan x="380" dy="25">calcul déterministe</tspan></text><text x="380" y="296" class="mono">WER · CER · PII</text>
+    <rect x="635" y="80" width="55" height="2" fill="#6ea7ff"/><path d="M680 80l14-8v16z" fill="#6ea7ff"/>
+    <rect x="700" y="0" width="280" height="340" rx="22" fill="#14372e" stroke="#25d4a1" stroke-width="2"/><circle cx="752" cy="55" r="28" fill="url(#green)"/><text x="739" y="62" class="note">03</text><text x="730" y="120" class="h">Métriques</text><text x="730" y="158" class="body"><tspan x="730">ASR :</tspan><tspan x="730" dy="25">WER et CER</tspan><tspan x="730" dy="25">PII :</tspan><tspan x="730" dy="25">précision, rappel, F1</tspan></text><text x="730" y="296" class="metric">mesuré</text>
+    <rect x="985" y="80" width="55" height="2" fill="#6ea7ff"/><path d="M1030 80l14-8v16z" fill="#6ea7ff"/>
+    <rect x="1050" y="0" width="280" height="340" rx="22" fill="#0d2444" stroke="#398cff" stroke-width="2"/><circle cx="1102" cy="55" r="28" fill="url(#blue)"/><text x="1089" y="62" class="note">04</text><text x="1080" y="120" class="h">Laboratoire</text><text x="1080" y="158" class="body"><tspan x="1080">Visualisation des</tspan><tspan x="1080" dy="25">résultats et limites</tspan><tspan x="1080" dy="25">pour comparaison</tspan><tspan x="1080" dy="25">entre modèles</tspan></text><text x="1080" y="296" class="mono">revue humaine</text>
+  </g>
+  <rect x="70" y="665" width="1460" height="120" rx="20" fill="#0b1a31" stroke="#315379"/><text x="105" y="705" class="small">RÈGLE D’INTERPRÉTATION</text><text x="105" y="746" class="note">Un audio réel sans transcription de référence mesure le fonctionnement du pipeline, pas le WER.</text><text x="105" y="771" class="body">Un corpus sans annotations PII ne permet pas de revendiquer précision, rappel ou F1 de détection des données sensibles.</text>
+</svg>

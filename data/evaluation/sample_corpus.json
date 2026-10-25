@@ -1,0 +1,30 @@
+{
+  "name": "ClaimShield local evaluation smoke corpus",
+  "description": "Corpus fictif minimal pour vérifier l’écran Laboratoire IA. Ne pas utiliser comme benchmark de performance.",
+  "examples": [
+    {
+      "reference": "Bonjour Alice Martin, mon contrat est AUTO-TEST-001.",
+      "hypothesis": "Bonjour Alice Martin, mon contrat est AUTO-TEST-001.",
+      "reference_entities": [
+        { "category": "PERSON", "text": "Alice Martin" },
+        { "category": "CONTRACT", "text": "AUTO-TEST-001" }
+      ],
+      "predicted_entities": [
+        { "category": "PERSON", "text": "Alice Martin" },
+        { "category": "CONTRACT", "text": "AUTO-TEST-001" }
+      ]
+    },
+    {
+      "reference": "L'accident est à Casablanca, téléphone 0612345678.",
+      "hypothesis": "L'accident est a Casablanca, téléphone 0612345678.",
+      "reference_entities": [
+        { "category": "LOCATION", "text": "Casablanca" },
+        { "category": "PHONE_NUMBER", "text": "0612345678" }
+      ],
+      "predicted_entities": [
+        { "category": "LOCATION", "text": "Casablanca" },
+        { "category": "PHONE_NUMBER", "text": "0612345678" }
+      ]
+    }
+  ]
+}
