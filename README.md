@@ -160,10 +160,8 @@ Le laboratoire accepte un JSON de la forme suivante :
 
 Les scores PII ne sont pas affichés comme des vérités générales sans annotations humaines. Les performances varient selon le bruit, les accents, les chevauchements de parole, la langue et la qualité du microphone. Une validation humaine est requise avant tout usage métier.
 
-## Documentation recruteur
+## Documentation technique
 
-- [Parcours de démonstration en deux minutes](docs/RECRUITER_DEMO.md)
-- [Description CV](docs/CV_DESCRIPTION.md)
 - [Architecture détaillée](docs/architecture.md)
 - [Méthodologie d’évaluation](docs/methodology.md)
 - [Sécurité et limites](docs/security.md)
