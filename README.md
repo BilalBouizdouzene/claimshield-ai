@@ -22,23 +22,23 @@ ClaimShield AI transforme une déclaration audio en transcription, faits de sini
 
 ## Captures réelles de l’interface
 
-Ces captures ont été prises sur l’application locale (`http://127.0.0.1:5173`) après traitement d’un audio réel avec `faster-whisper`. Elles ne proviennent pas d’une maquette externe. Les artefacts audio et la base SQLite utilisés pour les produire restent locaux et sont exclus du dépôt.
+Ces captures ont été prises sur l’application locale (`http://127.0.0.1:5173`) après traitement d’un audio réel avec `faster-whisper`. Elles ne proviennent pas d’une maquette externe. Elles sont exportées en PNG haute résolution ; cliquez sur une capture pour l’ouvrir à sa taille originale. Les artefacts audio et la base SQLite utilisés pour les produire restent locaux et sont exclus du dépôt.
 
 | Nouveau sinistre | Tableau de bord |
 |---|---|
-| ![Nouveau sinistre](docs/screenshots/01-new-claim.png) | ![Tableau de bord](docs/screenshots/02-dashboard.png) |
+| [![Nouveau sinistre](docs/screenshots/01-new-claim.png)](docs/screenshots/01-new-claim.png) | [![Tableau de bord](docs/screenshots/02-dashboard.png)](docs/screenshots/02-dashboard.png) |
 
 | Sinistres | Preuves du dossier |
 |---|---|
-| ![Sinistres](docs/screenshots/03-claims.png) | ![Preuves du dossier](docs/screenshots/04-evidence.png) |
+| [![Sinistres](docs/screenshots/03-claims.png)](docs/screenshots/03-claims.png) | [![Preuves du dossier](docs/screenshots/04-evidence.png)](docs/screenshots/04-evidence.png) |
 
 | Paramètres |
 |---|
-| ![Paramètres](docs/screenshots/05-settings.png) |
+| [![Paramètres](docs/screenshots/05-settings.png)](docs/screenshots/05-settings.png) |
 
 | Laboratoire IA | À propos / Recherche |
 |---|---|
-| ![Laboratoire IA](docs/screenshots/06-lab.png) | ![À propos et recherche](docs/screenshots/07-about.png) |
+| [![Laboratoire IA](docs/screenshots/06-lab.png)](docs/screenshots/06-lab.png) | [![À propos et recherche](docs/screenshots/07-about.png)](docs/screenshots/07-about.png) |
 
 ## Architecture
 

@@ -2,11 +2,12 @@
 
 :root { font-family: 'Manrope', system-ui, sans-serif; color: #f5f7fa; background: #090b11; font-synthesis: none; text-rendering: optimizeLegibility; --bg: #090b11; --surface: #101522; --card: #141a27; --card-2: #181f2e; --border: #273044; --muted: #8d99ad; --text: #f5f7fa; --cyan: #00d5c7; --violet: #9570ff; --blue: #5b9bff; --green: #42d98b; --amber: #f4b860; --red: #ff6d7c; }
 * { box-sizing: border-box; }
-body { margin: 0; min-width: 320px; background: radial-gradient(circle at 74% -10%, rgba(32, 61, 93, .18), transparent 34rem), var(--bg); }
+ body { margin: 0; min-width: 320px; overflow-x: hidden; background: radial-gradient(circle at 74% -10%, rgba(32, 61, 93, .18), transparent 34rem), var(--bg); }
 button, select, input { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 button { cursor: pointer; }
 .app-shell { min-height: 100vh; display: flex; }
+.app-shell.capture-mode { transform: scale(.8); transform-origin: top left; }
 .sidebar { position: fixed; inset: 0 auto 0 0; width: 244px; display: flex; flex-direction: column; padding: 25px 14px 16px; background: rgba(10, 13, 21, .94); border-right: 1px solid #1d2534; transition: width .25s ease; z-index: 10; }
 .sidebar.collapsed { width: 75px; }
 .brand { display: flex; align-items: center; gap: 11px; min-height: 39px; padding: 0 10px 20px; }
@@ -324,3 +325,55 @@ body::before {
 @media (prefers-reduced-motion: reduce) {
   .security-shield, .security-car, .sidebar-security-visual::after, .orbit-b, .vehicle-scan { animation: none !important; }
 }
+
+/* Desktop captures and wide monitors must keep every panel inside the viewport. */
+.page-content,
+.page-content > *,
+.dashboard-grid-wide,
+.dashboard-grid-wide.lower,
+.dashboard-grid,
+.dashboard-kpis,
+.stats-kpis,
+.stats-grid,
+.lab-grid,
+.settings-layout,
+.about-grid-reference,
+.about-bottom {
+  min-width: 0;
+}
+
+.dashboard-kpis,
+.stats-kpis,
+.dashboard-grid-wide,
+.dashboard-grid-wide.lower,
+.dashboard-grid,
+.stats-grid,
+.lab-grid,
+.settings-layout,
+.about-grid-reference,
+.about-bottom,
+.metric-card {
+  width: 100%;
+  max-width: 100%;
+}
+
+.dashboard-kpis,
+.stats-kpis { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+.dashboard-grid-wide,
+.dashboard-grid-wide.lower,
+.dashboard-grid {
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, .9fr);
+}
+
+.dashboard-grid-wide.lower { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); }
+.dashboard-grid-wide > *,
+.dashboard-grid-wide.lower > *,
+.dashboard-grid > *,
+.dashboard-kpis > *,
+.stats-kpis > *,
+.stats-grid > *,
+.lab-grid > *,
+.settings-layout > *,
+.about-grid-reference > *,
+.about-bottom > * { min-width: 0; }
